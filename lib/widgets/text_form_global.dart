@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
 class TextForm extends StatelessWidget {
- const TextForm({Key? key, required this.controller}) : super(key: key);
+ const TextForm({Key? key, required this.controller, required this.text, required this.textInputType, required this.obscure}) : super(key: key);
   final TextEditingController controller;
+  final String text;
+  final TextInputType textInputType;
+  final bool obscure;
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +24,13 @@ class TextForm extends StatelessWidget {
       ),
       child: TextFormField(
         controller: controller,
-        keyboardType: TextInputType.emailAddress,
-        obscureText: true,
-        decoration: const InputDecoration(
-          hintText: 'Correo',
+        keyboardType: textInputType,
+        obscureText: obscure,
+        decoration: InputDecoration(
+          hintText: text,
           border: InputBorder.none,
-          contentPadding: EdgeInsets.all(0),
-          hintStyle: TextStyle(
+          contentPadding: const EdgeInsets.all(0),
+          hintStyle: const TextStyle(
             height: 1,
           )
           ),

@@ -5,6 +5,7 @@ import 'package:live_reciclying/widgets/text_form_global.dart';
 class Login extends StatelessWidget {
    Login({Key? key}) : super(key: key);
    final TextEditingController correoController= TextEditingController();
+      final TextEditingController contrasenaController= TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,19 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 15),
-                TextForm(controller: correoController),
+                TextForm(controller: correoController, 
+                text: 'Correo', 
+                obscure: false, 
+                textInputType: TextInputType.emailAddress,
+                ),
+
+                const SizedBox(height: 6),
+                 TextForm(
+                  controller: contrasenaController,
+                  text: 'Contraseña',
+                  textInputType: TextInputType.text,
+                  obscure: true,
+                  ),
                   ],
                 ),
             ),
