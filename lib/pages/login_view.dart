@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_reciclying/utils/global_colors.dart';
+import 'package:live_reciclying/widgets/button_global.dart';
 import 'package:live_reciclying/widgets/text_form_global.dart';
 
 class Login extends StatelessWidget {
@@ -18,6 +19,7 @@ class Login extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 20),
                 Container(
                   alignment: Alignment.center,
                   child: Text(
@@ -45,13 +47,15 @@ class Login extends StatelessWidget {
                 textInputType: TextInputType.emailAddress,
                 ),
 
-                const SizedBox(height: 6),
+                const SizedBox(height: 10),
                  TextForm(
                   controller: contrasenaController,
                   text: 'Contraseña',
                   textInputType: TextInputType.text,
                   obscure: true,
                   ),
+                  const SizedBox(height: 10),
+                  const Button(),
                   ],
                 ),
             ),
