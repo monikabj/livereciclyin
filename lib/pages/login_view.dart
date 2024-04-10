@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_reciclying/utils/global_colors.dart';
 import 'package:live_reciclying/widgets/button_global.dart';
+import 'package:live_reciclying/widgets/social_login.dart';
 import 'package:live_reciclying/widgets/text_form_global.dart';
 
 class Login extends StatelessWidget {
@@ -56,6 +57,8 @@ class Login extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Button(),
+                  const SizedBox(height: 25),
+                  SocialMedia(),
                   ],
                 ),
             ),
