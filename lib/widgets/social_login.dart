@@ -17,6 +17,24 @@ class SocialMedia extends StatelessWidget {
               fontWeight: FontWeight.w600
             ),
           ),
+        ),
+        const SizedBox(height: 15),
+        Row(
+          children: [
+            Container(
+              alignment: Alignment.center,
+              height: 55,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(6),
+                boxShadow: [
+                  color: Colors.black,
+                  blurRadius: 10,
+                ]
+              ),
+              child: SvgPicture.asset("assets/images/assets/images/Google__G__logo.svg.png", height:  30),
+            )
+          ],
         )
       ],
 
