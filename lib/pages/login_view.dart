@@ -14,7 +14,7 @@ class Login extends StatelessWidget {
     final correo = correoController.text;
     final contrasena = contrasenaController.text;
 
-    final db = Db('mongodb://<username>:<password>@<host>:<port>/<database>');
+    final db = Db('mongodb+srv://admin:<password>@lrectr002.wfvwsjw.mongodb.net/?retryWrites=true&w=majority&appName=LRectr002');
     await db.open();
 
     final collection = db.collection('usuarios');
