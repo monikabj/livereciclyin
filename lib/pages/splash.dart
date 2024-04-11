@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:live_reciclying/pages/login_view.dart';
 import 'package:live_reciclying/utils/global_colors.dart';
+import 'package:live_reciclying/constants.dart';
+import 'package:mongo_dart/mongo_dart.dart';
 
 class Splash extends StatelessWidget {
   const Splash({super.key});

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:live_reciclying/constants.dart';
+import 'package:mongo_dart/mongo_dart.dart';
 import 'package:live_reciclying/utils/global_colors.dart';
 
 class SocialMedia extends StatelessWidget {
