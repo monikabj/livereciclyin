@@ -2,16 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:live_reciclying/utils/global_colors.dart';
 import 'package:live_reciclying/widgets/button_global.dart';
 import 'package:live_reciclying/widgets/social_login.dart';
-import 'package:live_reciclying/constants.dart';
 import 'package:mongo_dart/mongo_dart.dart';
 import 'package:live_reciclying/widgets/text_form_global.dart';
-import 'package:live_reciclying/main.dart';
-import 'package:live_reciclying/constants.dart';
 
 class Login extends StatelessWidget {
    Login({Key? key}) : super(key: key);
    final TextEditingController correoController= TextEditingController();
       final TextEditingController contrasenaController= TextEditingController();
+
+    void log() async {
+    final correo = correoController.text;
+    final contrasena = contrasenaController.text;
+
+    final db = Db('mongodb://<username>:<password>@<host>:<port>/<database>');
+    await db.open();
+
+    final collection = db.collection('usuarios');
+    final usuarios = await collection.findOne(where.eq('correo', correo));
+
+     if (usuarios != null) {
+      // Usuario encontrado, verificar la contraseña
+      if (usuarios['contrasena'] == contrasenaController) {
+        // Contraseña válida, autenticación exitosa
+        print('Login exitoso');
+      } else {
+        // Contraseña incorrecta
+        print('Contraseña incorrecta');
+      }
+    } else {
+      // Usuario no encontrado
+      print('Usuario no encontrado');
+    }
+    await db.close();
+  }
+
 
   @override
   Widget build(BuildContext context) {
