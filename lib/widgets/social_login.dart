@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:live_reciclying/utils/global_colors.dart';
 
 class SocialMedia extends StatelessWidget {
@@ -26,14 +27,17 @@ class SocialMedia extends StatelessWidget {
               height: 55,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(6),
                 boxShadow: [
-                  color: Colors.black,
-                  blurRadius: 10,
-                ]
+                  BoxShadow(
+                    color: Colors.black.withOpacity(.1),
+                    blurRadius: 10,
+                    ),
+                ],
               ),
-              child: SvgPicture.asset("assets/images/assets/images/Google__G__logo.svg.png", height:  30),
-            )
+              child: SvgPicture.asset(
+                "assets/images/assets/images/Google__G__logo.svg.png",
+               height:  30),
+            ),
           ],
         )
       ],
