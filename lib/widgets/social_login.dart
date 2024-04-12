@@ -37,7 +37,7 @@ class SocialMedia extends StatelessWidget {
                 ],
               ),
               child: SvgPicture.asset(
-                "assets/images/assets/images/Google__G__logo.svg.png",
+                "images/assets/free-google-1772223-1507807.webp",
                height:  30),
             ),
           ],
