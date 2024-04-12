@@ -9,7 +9,7 @@ class MongoDatabase{
     inspect(db);
     var status = db.serverStatus();
     print(status);
-    var Usuarios=db.collection(COLLECTION_NAME);
-    print(await collection.find().toList());
+    var usuarios=db.collection(COLLECTION_NAME);
+    print(await usuarios.find().toList());
   }
 }
